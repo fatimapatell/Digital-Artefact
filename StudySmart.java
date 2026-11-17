@@ -22,7 +22,7 @@ public class StudySmart // Creating main class
             for (int i = 0; i < num; i++) // Loops based on how many tasks the user has, incrementing by 1 each loop
             {
                 String entry = createEntry(myScanner); /* Passing scanner as a parameter to createEntry() so the method can read user input 
-                 and storing the string returned by the method in the variable 'entry'*/
+    and storing the string returned by the method in the variable 'entry'*/
                 tasks.add(entry); //Adding the new revision task entry to the list 'tasks' for storage
             }
         }
@@ -34,19 +34,6 @@ public class StudySmart // Creating main class
         Deadline is within 7 days or task takes 3 hours or more - high priority
         Deadline is within 7 days or task takes 2 hours or more - medium priority
         Deadline is more than 7 days away or task takes less than 2 hours - low priority*/
-        
-        for (int j = 0; j < tasks.length(); j++) 
-        {
-           if 
-            
-        }
-
-
-
-
-
-
-        
 
     }
 
@@ -80,5 +67,5 @@ public class StudySmart // Creating main class
         are not rewritten multiple times; only a single line is used to call a method.*/
 
     }
-   //myScanner.close(); 
 }
+   //myScanner.close(); 
