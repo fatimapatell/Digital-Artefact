@@ -29,9 +29,53 @@ public class StudySmart // Creating main class
     and storing the string returned by the method in the variable 'entry'*/
                 tasks.add(entry); //Adding the new revision task entry to the list 'tasks' for storage
             }
-        }
 
-        System.out.println(tasks); // Displays list
+            ArrayList<String> orderedTasks=new ArrayList<>(); // Creating a new list to store the ordered tasks
+            String[] priorityLevels = {"High", "Medium", "Low"}; // Creating an array to store the priority levels
+
+            System.out.println("The avaialable priority levels are: ");
+            for (int i=0; i < priorityLevels.length; i++) // For each priority level in the list of priority levels
+            {
+                System.out.println(priorityLevels[i]); // Print the current priority level
+            }
+            
+            //High priority tasks:
+            for (String task: tasks) // For each task in the list of tasks
+            {
+                if (task.contains("Priority: High")) //If the task is high priority
+                {
+                    orderedTasks.add(task);
+                }
+            }
+
+            for (String task: tasks) // For each task in the list of tasks
+            {
+                if (task.contains("Priority: Medium")) //If the task is medium priority
+                {
+                    orderedTasks.add(task);
+                }
+            }
+
+            for (String task: tasks) // For each task in the list of tasks
+            {
+                if (task.contains("Priority: Low")) //If the task is low priority
+                {
+                    orderedTasks.add(task);
+                }
+            }
+
+            System.out.println("\nHere are your tasks in order of priority: ");
+
+            for (int i=0; i < orderedTasks.size(); i++) // For each task in the list of ordered tasks
+            {
+                System.out.println("\nTask " + (i + 1) + ":"); // Numbering tasks starting at 1, not 0, for user readability
+                System.out.println(orderedTasks.get(i)); // Printing the task at the current index of the ordered tasks list
+            }
+        }
+        else // If the user is not ready to get started...
+        {
+            System.out.println("No worries! Come back when you're ready to get started!"); // Print a message to the user
+        }
 
         /* Task priority management:
         Deadline is today, tomorrow or within 2 days OR task takes 3 hours or more - high priority
